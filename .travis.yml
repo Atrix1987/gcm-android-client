@@ -53,3 +53,6 @@ before_script:
 script:
   - echo $ADB_INSTALL_TIMEOUT
   - android list target
+
+after_success:
+- ./gradlew cobertura coveralls
