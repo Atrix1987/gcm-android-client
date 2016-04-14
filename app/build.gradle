@@ -18,8 +18,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile deps.junit
     compile deps.gcm
-    testCompile deps.mockito
 
+    testCompile deps.junit
+    testCompile deps.mockito
 }

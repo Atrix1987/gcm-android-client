@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.abhisheknandi.gcm.client;
+package com.gcm.client;
 
 import android.content.Intent;
 import com.google.android.gms.iid.InstanceIDListenerService;

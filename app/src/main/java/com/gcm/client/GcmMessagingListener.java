@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.abhisheknandi.gcm.client;
+package com.gcm.client;
 
 import android.os.Bundle;
 import android.util.Log;
