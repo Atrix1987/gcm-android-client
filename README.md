@@ -46,6 +46,7 @@ public class CustomMessageReceivedListener implements GcmHelper.GcmMessageListen
     return false;
   }
 }
+```
 
 Now in your application class `onCreate` method following:
 
@@ -57,6 +58,7 @@ GcmHelper.getInstance()
         .init(getApplication());
 
 ```
+
 `setAuthorizedEntity` is the sender id or the Google Project number
 
 ## Minimum Requirements Google Play Services GCM library 7.5
