@@ -44,17 +44,12 @@ public class CustomMessageReceivedListener implements GcmHelper.GcmMessageListen
     //TODO check the bundle to see if the listener can handle payload
   }
 }
-```
-Add the Sender ID using which it will register for push notifications
-```xml
-<string name="gcm_authorized_entity">889908101771</string>
-```
 
 Now in your application class `onCreate` method or in your launcher activity's onCreate method do the following:
 
 ```java
 GcmHelper.getInstance()
-        .setAuthorizedEntity("889908101771")
+        .setAuthorizedEntity("889908101771") //This is the sender ID i.e., the Google Project Number
         .addRegistrationCallback(getApplicationContext(), new CustomRegistrationListener(), true)
         .addOnMessageReceivedCallback(new CustomMessageReceivedListener())
         .init(getApplication());
