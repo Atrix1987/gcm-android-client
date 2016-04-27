@@ -460,7 +460,7 @@ public final class GcmHelper {
   public interface GcmMessageListener {
 
     /**
-     * Called when a downstream GCM message is received. <strong>Runs on UI Thread<strong/>
+     * Called when a downstream GCM message is received.  &lt;strong&gt; Runs on UI Thread &lt;strong/&gt;
      *
      * @param context An instance of the application {@link Context}
      * @param from    SenderID of the sender.
@@ -473,6 +473,7 @@ public final class GcmHelper {
      * Tells whether the GCM payload can be handled by this listener
      *
      * @param data Data bundle containing message data as key/value pairs.
+     * @return true if the Listener can handle this payload
      */
     boolean canHandleMessage(Bundle data);
   }

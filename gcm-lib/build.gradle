@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    resourcePrefix "gcmandroidlib_"
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        versionCode 100
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile deps.gcm
+    provided deps.supportv4
+    compile deps.supportAnnotations
+
+    testCompile deps.junit
+    testCompile deps.mockito
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'gcm-android-client'
+
+    publishedGroupId = 'com.nandi'
+    libraryName = 'GCM Android Client'
+    artifact = 'gcm-android-client'
+
+    libraryDescription = 'A library which helps you register Google Cloud Messaging tokens and listen for GCM messages.'
+
+    siteUrl = 'www.abhisheknandi.com/devtools/android/gcm'
+    gitUrl = 'https://github.com/Atrix1987/gcm-android-client.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'atrix1987'
+    developerName = 'Abhishek Nandi'
+    developerEmail = 'iwizard.abhi@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
