@@ -1,3 +1,4 @@
+![GCM Lib](https://raw.githubusercontent.com/Atrix1987/gcm-android-client/master/gcm_helper_logo.png)
 # Android GCM Library
 A library which helps you register Google Cloud Messaging tokens and listen for GCM messages. It can be used to attach multiple providers and seamlessly deliver data and token to all the listeners.
 This library is very helpful for those you use multiple push notification provider.
@@ -42,6 +43,7 @@ public class CustomMessageReceivedListener implements GcmHelper.GcmMessageListen
 
   @Override public boolean canHandleMessage(Bundle data){
     //TODO check the bundle to see if the listener can handle payload
+    return false;
   }
 }
 
@@ -49,7 +51,7 @@ Now in your application class `onCreate` method or in your launcher activity's o
 
 ```java
 GcmHelper.getInstance()
-        .setAuthorizedEntity("889908101771") //This is the sender ID i.e., the Google Project Number
+        .setAuthorizedEntity("889908101771") /*This is the sender ID i.e., the Google Project Number*/
         .addRegistrationCallback(getApplicationContext(), new CustomRegistrationListener(), true)
         .addOnMessageReceivedCallback(new CustomMessageReceivedListener())
         .init(getApplication());
