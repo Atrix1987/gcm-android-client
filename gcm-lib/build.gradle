@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 101
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -30,18 +30,18 @@ dependencies {
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'gcm-android-client'
+    bintrayName = 'gcm-lib'
 
     publishedGroupId = 'com.nandi'
     libraryName = 'GCM Android Client'
-    artifact = 'gcm-android-client'
+    artifact = 'gcm-lib'
 
     libraryDescription = 'A library which helps you register Google Cloud Messaging tokens and listen for GCM messages.'
 
     siteUrl = 'www.abhisheknandi.com/devtools/android/gcm'
     gitUrl = 'https://github.com/Atrix1987/gcm-android-client.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'atrix1987'
     developerName = 'Abhishek Nandi'
