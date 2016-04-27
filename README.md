@@ -3,7 +3,7 @@
 A library which helps you register Google Cloud Messaging tokens and listen for GCM messages. It can be used to attach multiple providers and seamlessly deliver data and token to all the listeners.
 This library is very helpful for those you use multiple push notification provider.
 
-[![Build Status](https://travis-ci.org/Atrix1987/gcm-android-client.svg?branch=master)](https://travis-ci.org/Atrix1987/gcm-android-client)  [![Download](https://api.bintray.com/packages/atrix1987/maven/gcm-lib/images/download.svg) ](https://bintray.com/atrix1987/maven/gcm-lib/_latestVersion) [![Coverage Status](https://coveralls.io/repos/github/Atrix1987/gcm-android-client/badge.svg?branch=master)](https://coveralls.io/github/Atrix1987/gcm-android-client?branch=master)
+[![Build Status](https://travis-ci.org/Atrix1987/gcm-android-client.svg?branch=master)](https://travis-ci.org/Atrix1987/gcm-android-client)  [![Download](https://api.bintray.com/packages/atrix1987/maven/gcm-lib/images/download.svg) ](https://bintray.com/atrix1987/maven/gcm-lib/_latestVersion) [![Coverage Status](https://coveralls.io/repos/github/Atrix1987/gcm-android-client/badge.svg?branch=master)](https://coveralls.io/github/Atrix1987/gcm-android-client?branch=master) [![Javadoc](https://img.shields.io/badge/javadoc-OK-blue.svg)](https://atrix1987.github.io/gcm-lib/javadoc/1.0.1/)
 
 ### Salient Features
  * Takes care of GCM Registration
@@ -47,17 +47,17 @@ public class CustomMessageReceivedListener implements GcmHelper.GcmMessageListen
   }
 }
 
-Now in your application class `onCreate` method or in your launcher activity's onCreate method do the following:
+Now in your application class `onCreate` method following:
 
 ```java
 GcmHelper.getInstance()
-        .setAuthorizedEntity("889908101771") /*This is the sender ID i.e., the Google Project Number*/
+        .setAuthorizedEntity("889908101771")
         .addRegistrationCallback(getApplicationContext(), new CustomRegistrationListener(), true)
         .addOnMessageReceivedCallback(new CustomMessageReceivedListener())
         .init(getApplication());
 
 ```
-
+`setAuthorizedEntity` is the sender id or the Google Project number
 
 ## Minimum Requirements Google Play Services GCM library 7.5
 
