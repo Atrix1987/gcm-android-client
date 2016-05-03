@@ -13,6 +13,13 @@ This library is very helpful for those you use multiple push notification provid
 
 For example, A lot of apps use multiple push providers. This library helps them to maintain a clean code and also loosely couple the providers still providing support for all
 
+## Adding the library as a dependency
+Add the following your `build.gradle` file
+
+```groovy
+compile 'com.nandi:gcm-lib:1.0.1'
+```
+
 ## How to use ?
 
 Implementing a Registration Listener
