@@ -227,7 +227,7 @@ public final class GcmHelper {
     }
     saveSubscibedTopics(context);
     Intent intent = new Intent(context, RegistrationIntentService.class);
-    intent.setAction(RegistrationIntentService.ACTION_UNSUBSCRIBE);
+    intent.setAction(RegistrationIntentService.ACTION_SUBSCRIBE);
     intent.putExtra(RegistrationIntentService.EXTRA_TOPIC_LIST, newTopics);
     context.startService(intent);
     return true;
