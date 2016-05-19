@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.abhisheknandi.sampleapp"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    //noinspection GradleCompatible
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile "com.mixpanel.android:mixpanel-android:4.+"
+    compile project(':gcm-lib')
+    compile 'com.helpshift:android-helpshift-aar:4.4.0'
+    compile 'com.localytics.android:library:3.8+'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.moengage:moe-android-sdk:6.0.12'
+    compile 'com.appboy:android-sdk-ui:1.10+'
+
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven{
+       url 'http://maven.localytics.com/public'
+    }
+    maven { url "http://appboy.github.io/appboy-android-sdk/sdk" }
+}

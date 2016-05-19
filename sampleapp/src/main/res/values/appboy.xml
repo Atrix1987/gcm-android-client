@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_appboy_api_key">72b23a61-9882-4f5d-898f-2e7120d49b1f</string>
+    <bool name="com_appboy_push_gcm_messaging_registration_enabled">false</bool>
+    <drawable name="com_appboy_push_small_notification_icon">@drawable/ic_notification_icon</drawable>
+    <drawable name="com_appboy_push_large_notification_icon">@mipmap/ic_launcher</drawable>
+    <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
+</resources>

@@ -1,1 +1,1 @@
-include ':gcm-lib'
+include ':gcm-lib' , 'sampleapp'
