@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
-        versionCode 102
-        versionName "1.0.2"
+        versionCode 103
+        versionName "1.0.3"
     }
     buildTypes {
         release {
@@ -41,7 +41,7 @@ ext {
     siteUrl = 'www.abhisheknandi.com/devtools/android/gcm'
     gitUrl = 'https://github.com/Atrix1987/gcm-android-client.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.03'
 
     developerId = 'atrix1987'
     developerName = 'Abhishek Nandi'
