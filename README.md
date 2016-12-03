@@ -17,8 +17,10 @@ For example, A lot of apps use multiple push providers. This library helps them 
 Add the following your `build.gradle` file
 
 ```groovy
-compile 'com.nandi:gcm-lib:1.0.2+'
+compile 'com.nandi:gcm-lib:1.0.3'
 ```
+
+Supports Play Services GCM `10.0.1`
 
 ## How to use ?
 
