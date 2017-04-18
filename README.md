@@ -1,5 +1,7 @@
 ![GCM Lib](https://raw.githubusercontent.com/Atrix1987/gcm-android-client/master/gcm_helper_logo.png)
 # Android GCM Library
+
+[![Join the chat at https://gitter.im/Atrix1987/gcm-android-client](https://badges.gitter.im/Atrix1987/gcm-android-client.svg)](https://gitter.im/Atrix1987/gcm-android-client?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A library which helps you register Google Cloud Messaging tokens and listen for GCM messages. It can be used to attach multiple providers and seamlessly deliver data and token to all the listeners.
 This library is very helpful for those you use multiple push notification provider.
 
